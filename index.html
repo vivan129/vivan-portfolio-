@@ -59,9 +59,8 @@
         .project-details {
             display: none;
             opacity: 0;
-            max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
+            transition: opacity 0.5s ease;
             padding: 0.8rem;
             background: rgb(36, 39, 46);
             border-radius: 8px;
@@ -70,7 +69,7 @@
         .project-details.show {
             display: block;
             opacity: 1;
-            max-height: 300px;
+            max-height: none; /* Remove height restriction */
         }
         .contact-me {
             text-align: center;
@@ -91,6 +90,18 @@
         a:hover, button:hover {
             background: #004e92;
         }
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.9rem;
+            }
+            .project-card {
+                padding: 1rem;
+            }
+            .project-details {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+        }
     </style>
 </head>
 <body>
@@ -110,26 +121,24 @@
                     <p>At the age of 12, while in 7th grade, I designed and built a Fire-Fighting Drone — an innovative solution aimed at combating wildfires efficiently. This custom-built drone is powered by six high-speed BLDC motors and six propellers, ensuring stable flight and high agility. The core of the drone is its flight controller, which processes real-time data to maintain balance and navigation. Fueled by a 12V battery, the drone boasts extended operational time, crucial for emergency response. What sets this drone apart is the fireball-dropping mechanism — a system that releases specialized fire-extinguishing balls directly onto flames, tackling hard-to-reach forest fires. Encased in a durable drone frame, this creation merges technology and innovation, reflecting my passion for robotics and problem-solving. This project wasn’t just about building a machine — it was about crafting a solution to a real-world crisis, driven by a desire to make a meaningful impact.</p>
                 </div>
             </div>
-            <div class="project-card" onclick="toggleDetails('Electric Go-Kart')">
+            <div class="project-card" onclick="toggleDetails('Electric-Go-Kart-details')">
                 <h3>Electric Go-Kart</h3>
                 <p>Click for more</p>
-                <div id="Electric Go-Kart" class="project-details">
+                <div id="Electric-Go-Kart-details" class="project-details">
                     <p>At the age of 13, as an 8th grader, I embarked on an ambitious journey to design and build my very own Electric Go-Kart — a high-performance racing machine capable of reaching speeds up to 120 km/h. Every aspect of this project was a reflection of my passion for engineering and innovation. I personally designed and fabricated the entire chassis from scratch, adopting a shifter kart design for maximum agility and speed. The heart of the go-kart lies in its 2kW motor, powered by a 60V battery setup — a combination that delivers both power and endurance on the track.
 
                         Steering precision was achieved using an Ackermann geometry steering system, ensuring optimal handling during high-speed maneuvers. For safety and control, I installed a hydraulic disc brake system, paired with a rear axle chain drive assembly to efficiently transfer motor power to the wheels.
                         
                         Building this go-kart wasn’t just about assembling parts — it was about overcoming challenges. Working from Ludhiana, I faced numerous hurdles due to limited access to high-end components and resources. Yet, with relentless determination and creative problem-solving, I brought this project to life over the course of five intense months.
                         
-                        This electric go-kart represents more than just a vehicle — it’s a symbol of innovation, resilience, and the sheer thrill of turning an idea into reality. It fueled my drive to push technological boundaries and create solutions that merge speed, design, and engineering excellence.
-                        
-                        </p>
+                        This electric go-kart represents more than just a vehicle — it’s a symbol of innovation, resilience, and the sheer thrill of turning an idea into reality. It fueled my drive to push technological boundaries and create solutions that merge speed, design, and engineering excellence.</p>
                 </div>
             </div>
-            <div class="project-card" onclick="toggleDetails('codecrafter-bot-details')">
-                <h3>Comming soon !!</h3>
+            <div class="project-card" onclick="toggleDetails('coming-soon-details')">
+                <h3>Coming soon !!</h3>
                 <p>Click for more</p>
-                <div id="codecrafter-bot-details" class="project-details">
-                    <p>Comming soon !!</p>
+                <div id="coming-soon-details" class="project-details">
+                    <p>Coming soon !!</p>
                 </div>
             </div>
         </div>
